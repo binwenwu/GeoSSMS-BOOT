@@ -1,4 +1,4 @@
 ## 项目简介
-GeoSSMS
+GeoSSMS-BOOT
 
 ## 技术栈
