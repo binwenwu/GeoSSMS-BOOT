@@ -1,0 +1,83 @@
+#chatgpt配置
+chatgpt:
+  token: token
+  proxy-host: ${server.ip} #可选
+  proxy-port: ${server.proxy-port} #可选
+  model: text-davinci-003 #可选
+  chat-model: gpt-3.5-turbo #可选
+  retries: 20 #可选，默认为5
+  session-expiration-time: 3000 #可选，不填则会话永不过期
+
+server:
+  ip: localhost
+  port: 7070
+  proxy-port: 61704
+  password: wbw876653771@@
+
+
+# 文件上传路径，部署版本: /home/wpfs/algorithm/submission75254, 本地版本: C:/Users/Jiaoshou/Desktop/submission75254
+files:
+  upload:
+    path: C:/Users/Jiaoshou/Desktop/GeoSSMS/files    #C:/Users/Jiaoshou/Desktop/submission75254
+
+
+cmd:
+  start: E:\Anaconda3\Scripts\activate.bat &
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://125.220.153.23:31621/geossms?serverTimezone=GMT%2b8 # 数据库地址
+    username: root
+    password: VubCMiHvT1
+  redis:
+    host:  125.220.153.23
+    port:  31352
+    password: GWCMnhHUYa
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  boot:
+    admin:
+      client:
+        url: http://${server.ip}:7777  # SpringBoot Admin的服务端地址
+        instance:
+          prefer-ip: true # 基于IP地址进行服务器注册，默认域名注册
+  application:
+    name: GeoSSMS  # spb项目名称
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #扫描所有mybatis的xml文件
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+#开放端点用于SpringBoot Admin的监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    endpoint:
+      health:
+        show-details: always
+        enabled: true
+      info:
+        enabled: false
+      metrics:
+        enabled: true
+    enabled-by-default: true  # 开启所有监控端点
+
+
+
+
+
+
+
+
+
+
