@@ -15,7 +15,7 @@ import java.io.Serializable;
  * 权限管理
  * </p>
  *
- * @author 结束乐队
+ * @Author 珞珈壹佰叁
  * @since 2023-07-05
  */
 @Getter

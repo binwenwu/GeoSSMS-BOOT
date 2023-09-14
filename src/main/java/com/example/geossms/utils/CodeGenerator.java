@@ -24,7 +24,7 @@ public class CodeGenerator {
     private static void generate() {
         FastAutoGenerator.create("jdbc:mysql://"+serverIp+":31621/geossms?serverTimezone=GMT%2b8", "root", "VubCMiHvT1")
                 .globalConfig(builder -> {
-                    builder.author("结束乐队") // 设置作者
+                    builder.author("珞珈壹佰叁") // 设置作者
                             .enableSwagger() // 开启 swagger 模式
                             .fileOverride() // 覆盖已生成文件
                             .outputDir("C:\\Users\\Jiaoshou\\Desktop\\GeoSSMS-BOOT\\src\\main\\java\\"); // 指定输出目录

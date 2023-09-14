@@ -10,7 +10,7 @@ import java.util.List;
  * 服务类
  * </p>
  *
- * @author 结束乐队
+ * @author 珞珈壹佰叁
  * @since 2023-07-05
  */
 public interface IRoleService extends IService<Role> {

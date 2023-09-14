@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Select;
  *  Mapper 接口
  * </p>
  *
- * @author 结束乐队
+ * @author 珞珈壹佰叁
  * @since 2023-07-05
  */
 public interface RoleMapper extends BaseMapper<Role> {
