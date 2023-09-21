@@ -10,7 +10,7 @@ chatgpt:
 
 server:
   ip: localhost
-  port: 7070
+  port: 7071
   proxy-port: 61704
   password: wbw876653771@@
 
@@ -18,7 +18,7 @@ server:
 # 文件上传路径，部署版本: /home/wpfs/algorithm/submission75254, 本地版本: C:/Users/Jiaoshou/Desktop/submission75254
 files:
   upload:
-    path: C:/Users/Jiaoshou/Desktop/GeoSSMS/files    #C:/Users/Jiaoshou/Desktop/submission75254
+    path: C:/Users/Jiaoshou/Desktop/GeoSSMS-BOOT/files    #C:/Users/Jiaoshou/Desktop/submission75254
 
 
 cmd:

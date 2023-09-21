@@ -79,7 +79,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             one = new User();
             BeanUtil.copyProperties(userDTO, one, true);
             // 默认一个普通用户的角色
-            one.setRole(RoleEnum.ROLE_NORMAL.toString());
+            one.setRole(RoleEnum.ROLE_ADMIN.toString());
             if (one.getNickname() == null) {
                 one.setNickname(one.getUsername());
             }

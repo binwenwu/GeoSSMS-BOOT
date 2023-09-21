@@ -3,8 +3,11 @@ package com.example.geossms.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.geossms.common.Constants;
 import com.example.geossms.common.Result;
+import com.example.geossms.entity.Dict;
 import com.example.geossms.entity.Menu;
+import com.example.geossms.mapper.DictMapper;
 import com.example.geossms.service.IMenuService;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +30,8 @@ public class MenuController {
     private IMenuService menuService;
 
 
+    @Resource
+    private DictMapper dictMapper;
 
     // 新增或者更新
     @PostMapping
@@ -70,6 +75,13 @@ public class MenuController {
         queryWrapper.like("name", name);
         queryWrapper.orderByDesc("id");
         return Result.success(menuService.page(new Page<>(pageNum, pageSize), queryWrapper));
+    }
+
+    @GetMapping("/icons")
+    public Result getIcons() {
+        QueryWrapper<Dict> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("type", Constants.DICT_TYPE_ICON);
+        return Result.success(dictMapper.selectList(queryWrapper));
     }
 
 

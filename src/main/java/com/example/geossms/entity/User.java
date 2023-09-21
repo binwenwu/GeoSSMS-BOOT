@@ -1,6 +1,7 @@
 package com.example.geossms.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
@@ -10,6 +11,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * <p>
@@ -49,11 +51,28 @@ public class User implements Serializable {
     @ApiModelProperty("地址")
     private String address;
 
-    @ApiModelProperty("角色")
-    private String role;
-
     @ApiModelProperty("创建时间")
     private Date createTime;
 
+    @ApiModelProperty("头像")
+    private String avatarUrl;
+
+    @ApiModelProperty("角色")
+    private String role;
+
+    //    @TableField(exist = false)
+//    private List<Course> courses;
+//
+//    @TableField(exist = false)
+//    private List<Course> stuCourses;
+
+
+    @ApiModelProperty("负责的志愿活动")
+    @TableField(exist = false)
+    private List<Activity> activitys;
+
+    @ApiModelProperty("报名的志愿活动")
+    @TableField(exist = false)
+    private List<Activity> norActivitys;
 
 }

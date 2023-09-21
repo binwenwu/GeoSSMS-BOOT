@@ -10,11 +10,27 @@
         <result column="phone" property="phone" />
         <result column="address" property="address" />
         <result column="role" property="role" />
+        <result column="avatar_url" property="avatarUrl" />
         <result column="create_time" property="createTime" />
+        <collection property="activitys" javaType="java.util.ArrayList" ofType="com.example.geossms.entity.Activity">
+            <result column="chargeActivityName" property="name" />
+            <result column="chargeTimes" property="times" />
+        </collection>
+        <collection property="norActivitys" javaType="java.util.ArrayList" ofType="com.example.geossms.entity.Activity">
+            <result column="norActivityName" property="name" />
+            <result column="norTimes" property="times" />
+        </collection>
     </resultMap>
 
     <select id="findPage" resultMap="pageUser">
-        select sys_user.*,
+        select sys_user.*, sc.name as norActivityName, tc.name as chargeActivityName, tc.times as chargeTimes,
+        sc.times as norTimes from sys_user
+        left join normal_activity
+        on sys_user.id = normal_activity.normal_id
+        left join activity sc
+        on normal_activity.activity_id = sc.id
+        left join activity tc
+        on sys_user.id = tc.charge_id
         <where>
             <if test="username != null and username != ''">
                 and sys_user.username like concat('%', #{username} ,'%')
