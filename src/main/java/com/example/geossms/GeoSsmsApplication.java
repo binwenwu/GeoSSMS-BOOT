@@ -9,9 +9,6 @@ public class GeoSsmsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GeoSsmsApplication.class, args);
-
-
-
     }
 
 }
