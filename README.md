@@ -3,7 +3,6 @@ GeoSSMS-BOOT
 
 ```
 .
-├── 1.txt
 ├── README.md
 ├── files
 │   ├── 1f646b5e96804c90844d0465d6865c45.xlsx
@@ -104,131 +103,11 @@ GeoSSMS-BOOT
 │   │   └── resources
 │   │       ├── application.yml
 │   │       └── mapper
-│   │           ├── ActivityMapper.xml
-│   │           ├── ArticleMapper.xml
-│   │           ├── BuildingMapper.xml
-│   │           ├── ChildrenMapper.xml
-│   │           ├── CommentMapper.xml
-│   │           ├── MenuMapper.xml
-│   │           ├── RoleMapper.xml
-│   │           ├── TypicalMapper.xml
-│   │           └── UserMapper.xml
 │   └── test
 │       └── java
 │           └── com
 │               └── example
 │                   └── geossms
 │                       └── GeoSsmsApplicationTests.java
-└── target
-    ├── classes
-    │   ├── application.yml
-    │   ├── com
-    │   │   └── example
-    │   │       └── geossms
-    │   │           ├── GeoSsmsApplication.class
-    │   │           ├── common
-    │   │           │   ├── Constants.class
-    │   │           │   ├── Result.class
-    │   │           │   └── RoleEnum.class
-    │   │           ├── config
-    │   │           │   ├── AuthAccess.class
-    │   │           │   ├── CorsConfig.class
-    │   │           │   ├── InterceptorConfig.class
-    │   │           │   ├── MybatisPlusConfig.class
-    │   │           │   ├── SwaggerConfig.class
-    │   │           │   └── interceptor
-    │   │           │       └── JwtInterceptor.class
-    │   │           ├── controller
-    │   │           │   ├── ActivityController.class
-    │   │           │   ├── ArticleController.class
-    │   │           │   ├── BuildingController.class
-    │   │           │   ├── ChatGPTController.class
-    │   │           │   ├── ChildrenController.class
-    │   │           │   ├── CommentController.class
-    │   │           │   ├── EchartsController$1.class
-    │   │           │   ├── EchartsController.class
-    │   │           │   ├── FileController.class
-    │   │           │   ├── MenuController.class
-    │   │           │   ├── RoleController.class
-    │   │           │   ├── TypicalController.class
-    │   │           │   ├── UserController.class
-    │   │           │   └── dto
-    │   │           │       ├── UserDTO.class
-    │   │           │       └── UserPasswordDTO.class
-    │   │           ├── entity
-    │   │           │   ├── Activity.class
-    │   │           │   ├── Article.class
-    │   │           │   ├── Building.class
-    │   │           │   ├── Children.class
-    │   │           │   ├── Comment.class
-    │   │           │   ├── Dict.class
-    │   │           │   ├── Files.class
-    │   │           │   ├── GPTParams.class
-    │   │           │   ├── Menu.class
-    │   │           │   ├── ParamsForm.class
-    │   │           │   ├── PredictParams.class
-    │   │           │   ├── Role.class
-    │   │           │   ├── RoleMenu.class
-    │   │           │   ├── Typical.class
-    │   │           │   └── User.class
-    │   │           ├── exception
-    │   │           │   ├── GlobalExceptionHandler.class
-    │   │           │   └── ServiceException.class
-    │   │           ├── mapper
-    │   │           │   ├── ActivityMapper.class
-    │   │           │   ├── ArticleMapper.class
-    │   │           │   ├── BuildingMapper.class
-    │   │           │   ├── ChildrenMapper.class
-    │   │           │   ├── CommentMapper.class
-    │   │           │   ├── DictMapper.class
-    │   │           │   ├── FileMapper.class
-    │   │           │   ├── MenuMapper.class
-    │   │           │   ├── RoleMapper.class
-    │   │           │   ├── RoleMenuMapper.class
-    │   │           │   ├── TypicalMapper.class
-    │   │           │   └── UserMapper.class
-    │   │           ├── service
-    │   │           │   ├── IActivityService.class
-    │   │           │   ├── IArticleService.class
-    │   │           │   ├── IBuildingService.class
-    │   │           │   ├── IChildrenService.class
-    │   │           │   ├── ICommentService.class
-    │   │           │   ├── IMenuService.class
-    │   │           │   ├── IRoleService.class
-    │   │           │   ├── ITypicalService.class
-    │   │           │   ├── IUserService.class
-    │   │           │   └── impl
-    │   │           │       ├── ActivityServiceImpl.class
-    │   │           │       ├── ArticleServiceImpl.class
-    │   │           │       ├── BuildingServiceImpl.class
-    │   │           │       ├── ChildrenServiceImpl.class
-    │   │           │       ├── CommentServiceImpl.class
-    │   │           │       ├── MenuServiceImpl.class
-    │   │           │       ├── RoleServiceImpl.class
-    │   │           │       ├── TypicalServiceImpl.class
-    │   │           │       └── UserServiceImpl.class
-    │   │           └── utils
-    │   │               ├── CodeGenerator.class
-    │   │               └── TokenUtils.class
-    │   └── mapper
-    │       ├── ActivityMapper.xml
-    │       ├── ArticleMapper.xml
-    │       ├── BuildingMapper.xml
-    │       ├── ChildrenMapper.xml
-    │       ├── CommentMapper.xml
-    │       ├── MenuMapper.xml
-    │       ├── RoleMapper.xml
-    │       ├── TypicalMapper.xml
-    │       └── UserMapper.xml
-    ├── generated-sources
-    │   └── annotations
-    ├── generated-test-sources
-    │   └── test-annotations
-    └── test-classes
-        └── com
-            └── example
-                └── geossms
-                    └── GeoSsmsApplicationTests.class
-
 51 directories, 176 files
 ```
